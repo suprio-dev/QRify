@@ -70,10 +70,11 @@ generateBtn.addEventListener('click', (e) => {
 
     qrBox.innerHTML = "";
     new QRCode(qrBox, {
-      text: value,
-      width: 170,
-      height: 170
-    });
+  text: value,
+  width: 220,
+  height: 220,
+  
+});
     qrLimit();
   }
 
@@ -129,8 +130,8 @@ function qrRegenerate(oldValue) {
   qrBox.innerHTML = "";
   new QRCode(qrBox, {
     text: oldValue,
-    width: 170,
-    height: 170
+    width: 220,
+  height: 220,
   });
   qrLimit();
 }
