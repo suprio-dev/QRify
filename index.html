@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,27 +11,36 @@
 
     <style>
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-18px) rotate(6deg);
             }
         }
 
         @keyframes pulseGlow {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.35;
             }
+
             50% {
                 opacity: 0.7;
             }
         }
 
         @keyframes timerGlow {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.5;
             }
+
             50% {
                 opacity: 1;
             }
@@ -176,8 +186,7 @@
             <!-- Input -->
             <div class="relative mb-4">
 
-                <label for="qrInput"
-                       class="mb-2 block text-[10px]
+                <label for="qrInput" class="mb-2 block text-[10px]
                               font-medium uppercase
                               tracking-[0.18em]
                               text-white/45">
@@ -186,12 +195,7 @@
 
                 <div class="group relative">
 
-                    <input
-                        id="qrInput"
-                        type="text"
-                        placeholder="https://example.com"
-                        autocomplete="off"
-                        class="w-full rounded-2xl
+                    <input id="qrInput" type="text" placeholder="https://example.com" autocomplete="off" class="w-full rounded-2xl
                                border border-white/[0.09]
                                bg-black/20
                                px-4 py-3.5
@@ -202,8 +206,7 @@
                                focus:border-cyan-300/40
                                focus:bg-black/30
                                focus:ring-4
-                               focus:ring-cyan-400/[0.06]"
-                    />
+                               focus:ring-cyan-400/[0.06]" />
 
                     <div class="pointer-events-none
                                 absolute inset-y-0 right-4
@@ -218,9 +221,7 @@
 
 
             <!-- Generate Button -->
-            <button
-                id="generateBtn"
-                class="group relative w-full overflow-hidden
+            <button id="generateBtn" class="group relative w-full overflow-hidden
                        rounded-2xl
                        bg-gradient-to-r
                        from-cyan-400
@@ -287,8 +288,7 @@
 
 
                 <!-- QR Box -->
-                <div id="qrBox"
-                     class="flex min-h-[190px]
+                <div id="qrBox" class="flex min-h-[190px]
                             items-center justify-center
                             rounded-2xl
                             border border-dashed
@@ -323,9 +323,7 @@
                 <!-- QR Actions -->
                 <div class="mt-3 grid grid-cols-2 gap-2">
 
-                    <button
-                        id="regenerateBtn"
-                        class="rounded-xl
+                    <button id="regenerateBtn" class="rounded-xl
                                border border-cyan-400/15
                                bg-cyan-400/[0.06]
                                px-4 py-2.5
@@ -341,9 +339,7 @@
                     </button>
 
 
-                    <button
-                        id="clearBtn"
-                        class="rounded-xl
+                    <button id="clearBtn" class="rounded-xl
                                border border-white/[0.08]
                                bg-white/[0.025]
                                px-4 py-2.5
@@ -391,8 +387,7 @@
                         </div>
 
 
-                        <span id="timer"
-                              class="font-mono text-xs
+                        <span id="timer" class="font-mono text-xs
                                      font-bold
                                      text-cyan-300
                                      drop-shadow-[0_0_7px_rgba(34,211,238,0.5)]">
@@ -407,8 +402,7 @@
                                 rounded-full
                                 bg-white/[0.06]">
 
-                        <div id="timerBar"
-                             class="h-full w-full
+                        <div id="timerBar" class="h-full w-full
                                     rounded-full
                                     bg-gradient-to-r
                                     from-cyan-400
@@ -450,4 +444,5 @@
     <script src="index.js"></script>
 
 </body>
+
 </html>

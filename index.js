@@ -70,11 +70,13 @@ generateBtn.addEventListener('click', (e) => {
 
     qrBox.innerHTML = "";
     new QRCode(qrBox, {
-  text: value,
-  width: 220,
-  height: 220,
-  
-});
+      text: value,
+      width: 220,
+      height: 220,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
     qrLimit();
   }
 
@@ -129,9 +131,12 @@ function qrRegenerate(oldValue) {
   qrInput.value = oldValue;
   qrBox.innerHTML = "";
   new QRCode(qrBox, {
-    text: oldValue,
+    text: value,
     width: 220,
-  height: 220,
+    height: 220,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
   });
   qrLimit();
 }
