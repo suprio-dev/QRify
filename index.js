@@ -71,17 +71,17 @@ generateBtn.addEventListener('click', (e) => {
 
     qrBox.innerHTML = "";
     const wrapper = document.createElement("div");
-  wrapper.className = "bg-white p-6 rounded-2xl";
-  qrBox.appendChild(wrapper);
+    wrapper.className = "bg-white p-6 rounded-2xl";
+    qrBox.appendChild(wrapper);
 
-  new QRCode(wrapper, {
-    text: value,
-    width: 240,
-    height: 240,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.M
-  });
+    new QRCode(wrapper, {
+      text: value,
+      width: 240,
+      height: 240,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.M
+    });
 
     qrLimit();
   }
@@ -90,9 +90,7 @@ generateBtn.addEventListener('click', (e) => {
 
 })
 
-
-clearBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+function clearQR(){
   qrInput.value = "";
   qrBox.className = `flex min-h-[190px]
                             items-center justify-center
@@ -124,11 +122,17 @@ clearBtn.addEventListener('click', (e) => {
   clearInterval(timerId);
   timer.textContent = `30s`;
   timerBar.style.width = `100%`;
-  
+}
+
+clearBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  clearQR();
+
 })
 
 regenerateBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  qrBox.innerHTML = "";
   qrRegenerate(oldValue);
 })
 
